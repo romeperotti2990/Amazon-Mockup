@@ -1,19 +1,19 @@
 const products = [
     { name: "Harmonica", desc: "A chromatic harmonica in the key of C.", price: "$19.99", img: "Images/Harmonica.jpg" },
     { name: "Stickers", desc: "Assorted stickers for decoration.", price: "$4.99", img: "Images/Stickers.jpg" },
-    { name: "Videogame", desc: "New videogame for the Xbox 360.", price: "$39.99", img: "https://via.placeholder.com/150" },
-    { name: "T-Shirt", desc: "Comfortable cotton t-shirt.", price: "$14.99", img: "https://via.placeholder.com/150" },
-    { name: "Bluetooth Speaker", desc: "Portable wireless speaker.", price: "$29.99", img: "https://via.placeholder.com/150" },
-    { name: "Water Bottle", desc: "Reusable stainless steel bottle.", price: "$12.99", img: "https://via.placeholder.com/150" },
-    { name: "Notebook", desc: "Lined notebook for notes.", price: "$7.99", img: "https://via.placeholder.com/150" },
-    { name: "Headphones", desc: "Over-ear noise cancelling headphones.", price: "$59.99", img: "https://via.placeholder.com/150" },
-    { name: "Coffee Mug", desc: "Ceramic mug for hot drinks.", price: "$9.99", img: "https://via.placeholder.com/150" },
-    { name: "Desk Lamp", desc: "LED lamp for your desk.", price: "$24.99", img: "https://via.placeholder.com/150" },
-    { name: "Backpack", desc: "Durable backpack for travel.", price: "$34.99", img: "https://via.placeholder.com/150" },
-    { name: "Socks", desc: "Pack of 5 pairs of socks.", price: "$11.99", img: "https://via.placeholder.com/150" },
-    { name: "Phone Charger", desc: "Fast charging USB-C cable.", price: "$8.99", img: "https://via.placeholder.com/150" },
-    { name: "Pen Set", desc: "Set of 10 gel pens.", price: "$6.99", img: "https://via.placeholder.com/150" },
-    { name: "Umbrella", desc: "Compact travel umbrella.", price: "$13.99", img: "https://via.placeholder.com/150" },
+    { name: "Videogame", desc: "New videogame for the Xbox 360.", price: "$39.99", img: "Images/Videogame.png" },
+    { name: "T-Shirt", desc: "Comfortable cotton t-shirt.", price: "$14.99", img: "Images/T-Shirt.jpg" },
+    { name: "Bluetooth Speaker", desc: "Portable wireless speaker.", price: "$29.99", img: "Images/Speaker.jpg" },
+    { name: "Water Bottle", desc: "Reusable stainless steel bottle.", price: "$12.99", img: "Images/Water-Bottle.jpg" },
+    { name: "Notebook", desc: "Lined notebook for notes.", price: "$7.99", img: "Images/Notebook.jpg" },
+    { name: "Headphones", desc: "Over-ear noise cancelling headphones.", price: "$59.99", img: "Images/Headphones.jpg" },
+    { name: "Coffee Mug", desc: "Ceramic mug for hot drinks.", price: "$9.99", img: "Images/Mug.jpg" },
+    { name: "Desk Lamp", desc: "LED lamp for your desk.", price: "$24.99", img: "Images/Lamp.jpg" },
+    { name: "Backpack", desc: "Durable backpack for travel.", price: "$34.99", img: "Images/Backpack.jpg" },
+    { name: "Socks", desc: "Pack of 5 pairs of socks.", price: "$11.99", img: "Images/Socks.jpg" },
+    { name: "Phone Charger", desc: "Fast charging USB-C cable.", price: "$8.99", img: "Images/Charger.jpg" },
+    { name: "Pen Set", desc: "Set of 10 gel pens.", price: "$6.99", img: "Images/Pens.jpg" },
+    { name: "Umbrella", desc: "Compact travel umbrella.", price: "$13.99", img: "Images/Umbrella.jpg" },
 ];
 
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
@@ -156,7 +156,7 @@ function renderProducts() {
         card.className = "bg-white p-4 rounded shadow hover:shadow-lg transition w-64 flex flex-col items-center text-center";
 
         card.innerHTML = `
-        <img src="${product.img}" alt="${product.name}" class="w-32 h-32 object-cover mb-2 rounded" />
+        <img src="${product.img}" alt="${product.name}" class="w-48 h-32 object-contain mb-2 rounded" />
         <h2 class="text-lg font-semibold">${product.name}</h2>
         <p class="text-sm text-gray-700 mb-1">${product.desc}</p>
         <p class="text-sm text-gray-600">${product.price}</p>
